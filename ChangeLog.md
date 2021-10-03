@@ -1,5 +1,15 @@
 # Change Log
 
+
+## Version 0.3
+
+### Description
+Now Bresenham algorithm for drawing lines are available!
+
+### Features
+- Bresenham algorithm for drawing lines
+
+
 ## Version 0.2
 
 ### Description
