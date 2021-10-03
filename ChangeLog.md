@@ -2,6 +2,9 @@
 
 ## Version 0.2
 
+### Description
+Now pivot can be any location in the preview or outside of preview. Enums and Data types now are more recogonazble and better experience. also Drawing and rendering now are seperated.
+
 ### Features
 - Handling points that are out of preview.
 - Changing Data structure and Type organization.
