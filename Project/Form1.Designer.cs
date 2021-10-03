@@ -285,7 +285,7 @@ namespace MohakAoki
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Line DDA",
-            "Line Berzenham",
+            "Line Bresenham",
             "Circle"});
             this.comboBox1.Location = new System.Drawing.Point(543, 123);
             this.comboBox1.Name = "comboBox1";

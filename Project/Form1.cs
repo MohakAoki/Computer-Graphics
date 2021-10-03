@@ -107,7 +107,7 @@ namespace MohakAoki
             //    }
             //    points.Clear();
             //}
-            pictureBox1.Image = Renderer.GetRender();
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,6 +192,8 @@ namespace MohakAoki
                 _items[i] = (DrawItem)(drawList.Items[i]);
             }
             Renderer.AddItemsToDraw(_items, false);
+            pictureBox1.Image = null;
+            pictureBox1.Image = Renderer.GetRender();
         }
     }    
 }

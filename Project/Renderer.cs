@@ -20,7 +20,11 @@ namespace MohakAoki
 
         private static void Render()
         {
-            //panel = new Bitmap(size.Width, size.Height);
+            if (panel != null)
+            {
+                panel.Dispose();
+            }
+            panel = new Bitmap(size.Width, size.Height);
             List<Pixel> pixels = new List<Pixel>();
             pixels.AddRange(CreatePanel(size, pivot, true));
             pixels.AddRange(CreateItems(itemsToDraw.ToArray()));
@@ -100,12 +104,12 @@ namespace MohakAoki
             }
             LineShape verticalLine, horizontalLine;
 
-            verticalLine = DrawSystem.DrawDDA(Vector2.up * (_size.Height / 2 - 1), -Vector2.up * (_size.Height / 2));
+            verticalLine = DrawSystem.CreateDDALine(Vector2.up * (_size.Height / 2 - 1), -Vector2.up * (_size.Height / 2));
             for (int i = 0; i < verticalLine.points.Length; i++)
             {
                 verticalLine.points[i] += offset.UpOnly();
             }
-            horizontalLine = DrawSystem.DrawDDA(Vector2.right * (_size.Width / 2 - 1), -Vector2.right * (_size.Width / 2));
+            horizontalLine = DrawSystem.CreateDDALine(Vector2.right * (_size.Width / 2 - 1), -Vector2.right * (_size.Width / 2));
             for (int i = 0; i < horizontalLine.points.Length; i++)
             {
                 horizontalLine.points[i] += offset.RightOnly();
@@ -136,7 +140,10 @@ namespace MohakAoki
                 switch (item.drawMode)
                 {
                     case "Line DDA":
-                        points.AddRange(DrawSystem.DrawDDA(item.start, item.end).points);
+                        points.AddRange(DrawSystem.CreateDDALine(item.start, item.end).points);
+                        break;
+                    case "Line Bresenham":
+                        points.AddRange(DrawSystem.CreateBresenhamLine(item.start, item.end).points);
                         break;
                     default:
                         break;
