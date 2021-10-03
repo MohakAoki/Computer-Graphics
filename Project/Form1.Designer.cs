@@ -1,5 +1,5 @@
 ﻿
-namespace Project
+namespace MohakAoki
 {
     partial class Form1
     {
@@ -143,15 +143,15 @@ namespace Project
             // 
             this.pivot_X.Location = new System.Drawing.Point(418, 70);
             this.pivot_X.Maximum = new decimal(new int[] {
-            800,
+            1000,
             0,
             0,
             0});
             this.pivot_X.Minimum = new decimal(new int[] {
-            1,
+            1000,
             0,
             0,
-            0});
+            -2147483648});
             this.pivot_X.Name = "pivot_X";
             this.pivot_X.Size = new System.Drawing.Size(120, 23);
             this.pivot_X.TabIndex = 1;
@@ -166,15 +166,15 @@ namespace Project
             // 
             this.pivot_Y.Location = new System.Drawing.Point(544, 70);
             this.pivot_Y.Maximum = new decimal(new int[] {
-            800,
+            1000,
             0,
             0,
             0});
             this.pivot_Y.Minimum = new decimal(new int[] {
-            1,
+            1000,
             0,
             0,
-            0});
+            -2147483648});
             this.pivot_Y.Name = "pivot_Y";
             this.pivot_Y.Size = new System.Drawing.Size(120, 23);
             this.pivot_Y.TabIndex = 1;

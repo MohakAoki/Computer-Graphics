@@ -6,7 +6,6 @@ D:\Projects\University\Graphics\Project\Project\bin\Debug\net5.0-windows\Project
 D:\Projects\University\Graphics\Project\Project\bin\Debug\net5.0-windows\ref\Project.dll
 D:\Projects\University\Graphics\Project\Project\bin\Debug\net5.0-windows\Project.pdb
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.csproj.AssemblyReference.cache
-D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.Form1.resources
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.csproj.GenerateResource.cache
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.AssemblyInfoInputs.cache
@@ -16,3 +15,4 @@ D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\ref\Project.dll
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.pdb
 D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\Project.genruntimeconfig.cache
+D:\Projects\University\Graphics\Project\Project\obj\Debug\net5.0-windows\MohakAoki.Form1.resources
