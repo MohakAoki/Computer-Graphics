@@ -15,6 +15,7 @@ after running the project, you will see main window.
 for adding shapes to draw, first you need to select what kind of shape you want to draw (currently only line with DDA algorithm works).
 Then, fill the textbox of draw section.
 ![Write Point](/Demo/WritePoint.png)
+
 After that you need to click Add for adding the shape to draw list. then Draw button to draw the shapes that are in Draw List
 ![Adding point and draw](/Demo/AddPoint%20and%20Draw.png)
 
@@ -42,10 +43,9 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 ## TO DO
 - Completing Live Change to work with shape drawing.
 - Adding thickness to draw shapes
-- Handling points that are out of preview.
 - Adding Bresenham Algorithm for Drawing lines.
 - Adding  Circle Drawer and Eclipse Drawer.
 - Completing Analyzer to analyze how shapes are drawn
 
 ## Bugs
-- the location out of preview will cause error.
+- Not any bugs found.
