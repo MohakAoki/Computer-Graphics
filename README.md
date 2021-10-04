@@ -49,9 +49,11 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 ## TO DO
 - Completing Live Change to work with shape drawing.
 - Adding thickness to draw shapes.
-- Adding  Circle Drawer and Eclipse Drawer.
+- Adding  Eclipse Drawer.
 - Completing Analyzer to analyze how shapes are drawn.
 - Full screen preview.
+- Writing Custom Graphic System.
+- Adding Fill Option
 
 ## Bugs
-- Not any bugs found.
+- Bresenham Line may not work sometimes and cause memory leak and crash.
