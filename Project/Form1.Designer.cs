@@ -29,7 +29,6 @@ namespace MohakAoki
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numeric_width = new System.Windows.Forms.NumericUpDown();
             this.numeric_height = new System.Windows.Forms.NumericUpDown();
@@ -39,7 +38,6 @@ namespace MohakAoki
             this.keepRatio = new System.Windows.Forms.CheckBox();
             this.liveChange = new System.Windows.Forms.CheckBox();
             this.btn_setPivot = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lb_debug = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -218,10 +216,6 @@ namespace MohakAoki
             this.btn_setPivot.Text = "Set Pivot";
             this.btn_setPivot.UseVisualStyleBackColor = true;
             this.btn_setPivot.Click += new System.EventHandler(this.SetPivot);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lb_debug
             // 
@@ -543,7 +537,6 @@ namespace MohakAoki
         private System.Windows.Forms.CheckBox keepRatio;
         private System.Windows.Forms.CheckBox liveChange;
         private System.Windows.Forms.Button btn_setPivot;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lb_debug;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

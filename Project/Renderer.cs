@@ -31,17 +31,15 @@ namespace MohakAoki
 
             foreach (Pixel pixel in pixels)
             {
-                if (CheckPixel(pixel, panel))
-                    panel.SetPixel(pixel.x, pixel.y, pixel.color);
+                DrawPixel(pixel, ref panel);
             }
         }
 
 
         public static void Initialize(Vector2 pivot, Size size)
         {
-            _pivot = pivot;
             _size = size;
-            panel = new Bitmap(size.Width, size.Height);
+            _pivot = pivot;
             OnRender += Render;
         }
         public static void Initialize(int pivotX, int pivotY, int sizeWidth, int sizeHeight)
@@ -144,6 +142,9 @@ namespace MohakAoki
                         break;
                     case "Line Bresenham":
                         points.AddRange(DrawSystem.CreateBresenhamLine(item.start, item.end).points);
+                        break;
+                    case "Circle":
+                        points.AddRange(DrawSystem.CreateCircle(item.start, item.end.X).points);
                         break;
                     default:
                         break;
