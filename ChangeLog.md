@@ -1,6 +1,16 @@
 # Change Log
 
+## Version 0.3
 
+### Description
+Circle Drawer Come to live! also Full documention for DrawSystem class now available!
+
+### Features
+- Circle Drawer.
+- Full documention for DrawSystem class
+- CircleShape
+
+-------------------------------------------------------------------------------------------
 ## Version 0.3
 
 ### Description
@@ -9,7 +19,7 @@ Now Bresenham algorithm for drawing lines are available!
 ### Features
 - Bresenham algorithm for drawing lines
 
-
+-------------------------------------------------------------------------------------------
 ## Version 0.2
 
 ### Description
