@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.5
+
+### Description
+Fixing Bresenham Line Drawer bug that doesn't draw lines properly.
+
+### Hotfix
+- Bresenham Line Drawer
+
+-------------------------------------------------------------------------------------------
 ## Version 0.4
 
 ### Description
