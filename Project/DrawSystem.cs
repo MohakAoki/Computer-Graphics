@@ -93,7 +93,7 @@ namespace MohakAoki
 
             // Defining m (slope of the line) and linetype that is needed for Bresenham algorithm.
             float m = 0;
-            LineType type = LineType.StepOnX;
+            LineType type;
             LineAnalys(_start, _end, out m, out type);
 
             // Creating a collection for holding points of line and adding first point (start) to it.
@@ -105,40 +105,42 @@ namespace MohakAoki
             float dY = (_end.Y - _start.Y); //Delta Y
             float dX = (_end.X - _start.X); //Delta X
             float pk = 0; // Pk and Pk+1 at the same time
-
+            int _signX = Math.Sign(dX);
+            int _signY = Math.Sign(dY);
             //Bresenham Main algorithm
             if (type.Equals(LineType.StepOnX))
             {
-                pk = 2 * dY - dX;
+                pk = (2 * dY * _signY) - dX * _signX;
                 do
                 {
+                    //System.Windows.Forms.MessageBox.Show(pk.ToString());
                     if (pk >= 0)
                     {
-                        pk += 2 * (dY - dX);
-                        _temp += Vector2.one;
+                        pk += 2 * (dY * _signY - dX * _signX);
+                        _temp += new Vector2(_signX, _signY);
                     }
                     else
                     {
-                        pk += 2 * dY;
-                        _temp += Vector2.right;
+                        pk += 2 * dY * _signY;
+                        _temp += Vector2.right * _signX;
                     }
                     points.Add(_temp);
                 } while (_temp != _end);
             }
             else
             {
-                pk = 2 * dX - dY;
+                pk = 2 * dX * _signX - dY * _signY;
                 do
                 {
                     if (pk >= 0)
                     {
-                        pk += 2 * (dX - dY);
-                        _temp += Vector2.one;
+                        pk += 2 * (dX * _signX - dY * _signY);
+                        _temp += new Vector2(_signX, _signY);
                     }
                     else
                     {
-                        pk += 2 * dX;
-                        _temp += Vector2.up;
+                        pk += 2 * dX * _signX;
+                        _temp += Vector2.up * _signY;
                     }
                     points.Add(_temp);
                 } while (_temp != _end);

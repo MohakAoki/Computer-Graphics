@@ -136,7 +136,7 @@ namespace MohakAoki
             if (drawList.SelectedIndex < 0)
                 return;
             drawList.Items.RemoveAt(drawList.SelectedIndex);
-            UpdatePreview();
+            DrawTheList(sender, e);
         }
 
         private void colorPreview_Click(object sender, EventArgs e)
