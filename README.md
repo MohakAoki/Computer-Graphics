@@ -53,7 +53,9 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 - Completing Analyzer to analyze how shapes are drawn.
 - Full screen preview.
 - Writing Custom Graphic System.
-- Adding Fill Option
+- Adding Fill Option.
+- Adding Save & Load.
+- Finding lines by mouse click.
 
 ## Bugs
-- Bresenham Line may not work sometimes and cause memory leak and crash.
+- 
