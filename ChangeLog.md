@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.6.1
+
+### Description
+Hotfix
+
+### Hotfix
+- Eclipse pivot not working
+
+-------------------------------------------------------------------------------------------
 ## Version 0.6
 
 ### Description
