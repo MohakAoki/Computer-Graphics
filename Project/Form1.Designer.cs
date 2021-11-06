@@ -280,7 +280,8 @@ namespace MohakAoki
             this.comboBox1.Items.AddRange(new object[] {
             "Line DDA",
             "Line Bresenham",
-            "Circle"});
+            "Circle",
+            "Eclipse x²/a² + y²/b² = 1"});
             this.comboBox1.Location = new System.Drawing.Point(543, 123);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
@@ -310,12 +311,12 @@ namespace MohakAoki
             // 
             this.pointAWidth.Location = new System.Drawing.Point(418, 152);
             this.pointAWidth.Maximum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             0});
             this.pointAWidth.Minimum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             -2147483648});
@@ -328,12 +329,12 @@ namespace MohakAoki
             // 
             this.pointAHeight.Location = new System.Drawing.Point(544, 152);
             this.pointAHeight.Maximum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             0});
             this.pointAHeight.Minimum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             -2147483648});
@@ -355,12 +356,12 @@ namespace MohakAoki
             // 
             this.pointBWidth.Location = new System.Drawing.Point(417, 181);
             this.pointBWidth.Maximum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             0});
             this.pointBWidth.Minimum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             -2147483648});
@@ -373,12 +374,12 @@ namespace MohakAoki
             // 
             this.pointBHeight.Location = new System.Drawing.Point(543, 181);
             this.pointBHeight.Maximum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             0});
             this.pointBHeight.Minimum = new decimal(new int[] {
-            800,
+            1000000,
             0,
             0,
             -2147483648});

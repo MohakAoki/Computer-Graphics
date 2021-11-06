@@ -8,6 +8,7 @@
     public enum DrawElement
     {
         Line,
-        Circle
+        Circle,
+        Eclipse
     }
 }

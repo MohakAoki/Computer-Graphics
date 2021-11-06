@@ -146,6 +146,9 @@ namespace MohakAoki
                     case "Circle":
                         points.AddRange(DrawSystem.CreateCircle(item.start, item.end.X).points);
                         break;
+                    case "Eclipse x²/a² + y²/b² = 1":
+                        points.AddRange(DrawSystem.CreateEclipse(item.start, item.end).points);
+                        break;
                     default:
                         break;
                 }

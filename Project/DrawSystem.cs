@@ -222,5 +222,66 @@ namespace MohakAoki
             } while (x < y);
             return new CircleShape(pivot, radious, points.ToArray());
         }
+
+        public static Eclipse CreateEclipse(Vector2 offset, Vector2 ab)
+        {
+            List<Vector2> points = new List<Vector2>();
+
+            int a = (int)Math.Sqrt(ab.X);
+            int b = (int)Math.Sqrt(ab.Y);
+            int pk = b * b + a * a / 4 - a * a * b; // b² + a²/4 - a²b
+            Vector2 _point = Vector2.up * b;
+            int con1 = 0; //2b² Xk+1
+            int con2 = 0; //2a² Yk+1
+            bool I2 = false; //if is in II position
+            do
+            {
+                points.Add(_point);
+                points.Add(-_point);
+                points.Add(new Vector2(-_point.X, _point.Y));
+                points.Add(new Vector2(_point.X, -_point.Y));
+                if (!I2) // I position
+                {
+                    if (pk < 0)
+                    {
+                        _point += Vector2.right;
+                        con1 = 2 * b * b * (_point.X);
+                        con2 = 2 * a * a * (_point.Y);
+                        pk += con1 + b * b;
+                    }
+                    else
+                    {
+                        _point += Vector2.right - Vector2.up;
+                        con1 = 2 * b * b * (_point.X);
+                        con2 = 2 * a * a * (_point.Y);
+                        pk += con1 - con2 + b * b;
+                    }
+                    if (con1 >= con2)
+                    {
+                        I2 = true;
+                        pk = (int)(b * b * ((_point.X + .5f) * (_point.X + .5f) - a * a) + a * a * (_point.Y - 1) * (_point.Y - 1)); //f(X, Y) = b²X² + a²Y² - a²b² => b²(X² - a²) + a²Y²
+                    }
+                }
+                else
+                {
+                    if (pk < 0)
+                    {
+                        _point += Vector2.right - Vector2.up;
+                        con1 = 2 * b * b * (_point.X);
+                        con2 = 2 * a * a * (_point.Y);
+                        pk += con1 - con2 + a * a;
+                    }
+                    else
+                    {
+                        _point += -Vector2.up;
+                        con1 = 2 * b * b * (_point.X);
+                        con2 = 2 * a * a * (_point.Y);
+                        pk += -con2 + a * a;
+                    }
+                }
+            } while (_point != Vector2.right * a);
+
+            return new Eclipse(offset, ab, points.ToArray());
+        }
     }
 }

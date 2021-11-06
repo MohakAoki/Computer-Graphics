@@ -88,6 +88,10 @@ namespace MohakAoki
             {
                 _drawElement = DrawElement.Circle;
             }
+            else if (comboBox1.SelectedItem.ToString().ToLower().Contains("eclipse"))
+            {
+                _drawElement = DrawElement.Eclipse;
+            }
             else
             {
                 _drawElement = DrawElement.Line;
@@ -115,6 +119,15 @@ namespace MohakAoki
                     pointBHeight.Value = 0;
                     lb_firstData.Text = "Center";
                     lb_secondData.Text = "Radious";
+                    break;
+                case DrawElement.Eclipse:
+                    pointAWidth.Visible = true;
+                    pointAHeight.Visible = true;
+                    pointBWidth.Visible = true;
+                    pointBHeight.Visible = true;
+                    pointBHeight.Value = 0;
+                    lb_firstData.Text = "Offset";
+                    lb_secondData.Text = "a² b²";
                     break;
                 default:
                     break;
