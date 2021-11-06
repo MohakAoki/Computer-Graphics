@@ -49,7 +49,6 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 ## TO DO
 - Completing Live Change to work with shape drawing.
 - Adding thickness to draw shapes.
-- Adding  Eclipse Drawer.
 - Completing Analyzer to analyze how shapes are drawn.
 - Full screen preview.
 - Writing Custom Graphic System.
