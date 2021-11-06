@@ -223,8 +223,15 @@ namespace MohakAoki
             return new CircleShape(pivot, radious, points.ToArray());
         }
 
-        public static Eclipse CreateEclipse(Vector2 offset, Vector2 ab)
+        /// <summary>
+        /// Creating an Eclipse by algorithm x²/a² + y²/b² = 1 on the <paramref name="pivot"/> position
+        /// </summary>
+        /// <param name="pivot">The center of eclipse. not eclipse 2 main pivots</param>
+        /// <param name="ab">The a and b in formula</param>
+        /// <returns></returns>
+        public static Eclipse CreateEclipse(Vector2 pivot, Vector2 ab)
         {
+            //Defigning variables
             List<Vector2> points = new List<Vector2>();
 
             int a = (int)Math.Sqrt(ab.X);
@@ -234,12 +241,13 @@ namespace MohakAoki
             int con1 = 0; //2b² Xk+1
             int con2 = 0; //2a² Yk+1
             bool I2 = false; //if is in II position
+
             do
             {
-                points.Add(_point);
-                points.Add(-_point);
-                points.Add(new Vector2(-_point.X, _point.Y));
-                points.Add(new Vector2(_point.X, -_point.Y));
+                points.Add(_point + pivot); //Main Quarter
+                points.Add(-_point + pivot); //Other Quarter
+                points.Add(new Vector2(-_point.X, _point.Y) + pivot); //Other Quarter
+                points.Add(new Vector2(_point.X, -_point.Y) + pivot); //Other Quarter
                 if (!I2) // I position
                 {
                     if (pk < 0)
@@ -262,7 +270,7 @@ namespace MohakAoki
                         pk = (int)(b * b * ((_point.X + .5f) * (_point.X + .5f) - a * a) + a * a * (_point.Y - 1) * (_point.Y - 1)); //f(X, Y) = b²X² + a²Y² - a²b² => b²(X² - a²) + a²Y²
                     }
                 }
-                else
+                else //II position
                 {
                     if (pk < 0)
                     {
@@ -279,9 +287,12 @@ namespace MohakAoki
                         pk += -con2 + a * a;
                     }
                 }
-            } while (_point != Vector2.right * a);
+            } while (_point != Vector2.right * a); //If is on the last point, then finish the loop
 
-            return new Eclipse(offset, ab, points.ToArray());
+            points.Add(_point); // Adding two last points
+            points.Add(-_point); // Adding two last points
+
+            return new Eclipse(pivot, ab, points.ToArray());
         }
     }
 }
