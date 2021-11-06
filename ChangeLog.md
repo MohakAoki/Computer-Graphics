@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.6
+
+### Description
+Adding Eclipse Drawer and Documention for Vector
+
+### Features
+- Eclipse Drawer.
+
+-------------------------------------------------------------------------------------------
 ## Version 0.5
 
 ### Description
