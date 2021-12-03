@@ -139,7 +139,8 @@ namespace MohakAoki
             DrawItem newItem = new DrawItem(comboBox1.SelectedItem.ToString(),
                 new Vector2(pointAWidth.Value, pointAHeight.Value),
                 new Vector2(pointBWidth.Value, pointBHeight.Value),
-                colorDialog1.Color);
+                colorDialog1.Color,
+                null);
             drawList.Items.Add(newItem);
             UpdatePreview();
         }
@@ -164,7 +165,12 @@ namespace MohakAoki
             Graphics g = e.Graphics;
 
             g.FillRectangle(new SolidBrush(e.BackColor), e.Bounds);
-            g.DrawString(drawList.Items[e.Index].ToString(), e.Font, new SolidBrush(((DrawItem)drawList.Items[e.Index]).color), new PointF(e.Bounds.X, e.Bounds.Y));
+            string text = drawList.Items[e.Index].ToString();
+            if (((DrawItem)drawList.Items[e.Index]).transform != null)
+            {
+                text = "Transform: " + text;
+            }
+            g.DrawString(text, e.Font, new SolidBrush(((DrawItem)drawList.Items[e.Index]).color), new PointF(e.Bounds.X, e.Bounds.Y));
 
             e.DrawFocusRectangle();
         }
@@ -177,6 +183,31 @@ namespace MohakAoki
                 _items[i] = (DrawItem)(drawList.Items[i]);
             }
             Renderer.AddItemsToDraw(_items, false);
+            UpdatePreview();
+        }
+
+        private void TransformElement(object sender, EventArgs e)
+        {
+            if (drawList.SelectedIndex < 0)
+            {
+                MessageBox.Show("First You should select an item from draw list.", "No Item Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                TransformTable tt = new TransformTable();
+                tt.GiveResult += TransformRes;
+                DrawItem di = (DrawItem)drawList.SelectedItem;
+                di.color = colorDialog1.Color;
+                tt.SetBaseItem(di);
+                tt.ShowDialog();
+            }
+        }
+        private void TransformRes(Transform _transform)
+        {
+            MessageBox.Show("Recived! :" + _transform.baseItem.ToString());
+            DrawItem newItem = _transform.baseItem;
+            newItem.transform = _transform;
+            drawList.Items.Add(newItem);
             UpdatePreview();
         }
     }    

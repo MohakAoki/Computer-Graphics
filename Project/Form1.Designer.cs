@@ -61,6 +61,7 @@ namespace MohakAoki
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorPreview = new System.Windows.Forms.Label();
             this.drawList = new System.Windows.Forms.ListBox();
+            this.btnTransform = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_height)).BeginInit();
@@ -431,7 +432,7 @@ namespace MohakAoki
             // 
             this.btnAnalyse.Location = new System.Drawing.Point(546, 227);
             this.btnAnalyse.Name = "btnAnalyse";
-            this.btnAnalyse.Size = new System.Drawing.Size(118, 23);
+            this.btnAnalyse.Size = new System.Drawing.Size(62, 23);
             this.btnAnalyse.TabIndex = 2;
             this.btnAnalyse.Text = "Analyse";
             this.btnAnalyse.UseVisualStyleBackColor = true;
@@ -439,9 +440,9 @@ namespace MohakAoki
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(670, 227);
+            this.btnDelete.Location = new System.Drawing.Point(691, 227);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(78, 23);
+            this.btnDelete.Size = new System.Drawing.Size(57, 23);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -474,6 +475,16 @@ namespace MohakAoki
             this.drawList.TabIndex = 7;
             this.drawList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.drawList_DrawItem);
             // 
+            // btnTransform
+            // 
+            this.btnTransform.Location = new System.Drawing.Point(614, 227);
+            this.btnTransform.Name = "btnTransform";
+            this.btnTransform.Size = new System.Drawing.Size(71, 23);
+            this.btnTransform.TabIndex = 2;
+            this.btnTransform.Text = "Transform";
+            this.btnTransform.UseVisualStyleBackColor = true;
+            this.btnTransform.Click += new System.EventHandler(this.TransformElement);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -496,6 +507,7 @@ namespace MohakAoki
             this.Controls.Add(this.liveChange);
             this.Controls.Add(this.keepRatio);
             this.Controls.Add(this.btn_setPivot);
+            this.Controls.Add(this.btnTransform);
             this.Controls.Add(this.btnAnalyse);
             this.Controls.Add(this.btnDraw);
             this.Controls.Add(this.btnDelete);
@@ -561,6 +573,7 @@ namespace MohakAoki
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label colorPreview;
         private System.Windows.Forms.ListBox drawList;
+        private System.Windows.Forms.Button btnTransform;
     }
 }
 
