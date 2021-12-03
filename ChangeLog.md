@@ -1,5 +1,17 @@
 # Change Log
 
+## Version 0.7.0
+
+### Description
+Transformation
+
+### Features
+- Adding position transform.
+- Adding rotation transform.
+- Adding scaling transform.
+- Updating Tutorial and Readme.
+
+-------------------------------------------------------------------------------------------
 ## Version 0.6.1
 
 ### Description
