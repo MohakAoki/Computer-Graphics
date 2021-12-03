@@ -42,6 +42,14 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 
 ![Changin pivot](/Demo/Changing%20Pivot.png)
 
+### Transformation
+For transforming you need to select a shape from draw list first. then select color for new transform shape and then click Transform button.
+
+![Transform table](/Demo/Transform%20Table.png)
+
+In the new window you can add transforms such as adding position to current position (positive or negative), scaling the current shape by whole numbers or adding rotation to shape between -360 degree and +360 degree.
+. in scaling the lines and curves may not look good.
+
 ### Other features
 - Keep ratio: for keeping ratio of pivot when chaning the size of preview. if turn off, by changing size, pivot will remain at the current location.
 - Live Change: if true, then no needs to click buttons. all features will work automatically (currently only size and pivot works).
@@ -55,6 +63,8 @@ All draw shapes are base on pivot. You can simply change the pivot location by c
 - Adding Fill Option.
 - Adding Save & Load.
 - Finding lines by mouse click.
+- Better lines and curves on scaling
+- Adding point scale factor
 
 ## Bugs
 - 
